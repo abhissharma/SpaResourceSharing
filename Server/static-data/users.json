@@ -1,0 +1,66 @@
+[
+    {
+      "user_type": "Admin",
+      "user_id": 1,
+      "user_type_id": 1,
+      "email": "testadmin@soprasteria.com",
+      "name": "Test Admin",
+      "password": "admin"
+    },
+    {
+      "user_type": "Guest",
+      "user_id": 5,
+      "user_type_id": 1,
+      "email": "testguest@soprasteria.com",
+      "name": "Test Guest",
+      "password": "guest"
+    },
+    {
+      "user_type": "Guest",
+      "user_id": 5,
+      "user_type_id": 9,
+      "email": "testguest@soprasteria.com",
+      "name": "Test Guest 2",
+      "password": "guest"
+    },
+    {
+      "user_type": "Host",
+      "user_id": 2,
+      "user_type_id": 25,
+      "email": "testdhost@gmail.com",
+      "name": null,
+      "password": "dhost"
+    },
+    {
+      "user_type": "Host",
+      "user_id": 4,
+      "user_type_id": 26,
+      "email": "testshost@soprasteria.com",
+      "name": null,
+      "password": "shost"
+    },
+    {
+      "user_type": "Host",
+      "user_id": 4,
+      "user_type_id": 30,
+      "email": "testshost@soprasteria.com",
+      "name": null,
+      "password": "shost"
+    },
+    {
+      "user_type": "Initiator",
+      "user_id": 6,
+      "user_type_id": 6,
+      "email": "testinitiator@soprasteria.com ",
+      "name": null,
+      "password": "initiator"
+    },
+    {
+      "user_type": "Receptionist",
+      "user_id": 7,
+      "user_type_id": 7,
+      "email": "testrecptionist@gmail.com",
+      "name": null,
+      "password": "reception"
+    }
+  ]
