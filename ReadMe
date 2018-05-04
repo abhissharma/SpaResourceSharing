@@ -1,0 +1,5 @@
+1. Install node_modules in Frondend and backend Folders
+2. Start the backend server using 'nodemon server.js'
+3. Start the frondend server using 'nodemon server.js'
+4. Open the link 'localhost:4203//app1' for the first spa
+5. Login using the credentials 'testadmin@soprasteria.com' as email and 'admim' as password 
