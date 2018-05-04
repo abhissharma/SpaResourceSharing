@@ -1,0 +1,29 @@
+<div>
+  <img src="./assets/digilab.png" class="img-responsive">
+</div><br>
+<div *ngIf="name">
+  <p>{{name}}</p>
+</div>
+<mat-nav-list>
+<ng-template [ngIf] = "isAdmin">
+  <a mat-list-item
+    routerLink="/main/digilab">
+    <mat-icon matListIcon>account_balance</mat-icon>
+    <h6 matLine> DigiLabs </h6>
+  </a>
+</ng-template>
+<!-- <a mat-list-item
+  routerLink="/main/session">
+  <mat-icon matListIcon>group</mat-icon>
+  <h6 matLine> My Sessions </h6>
+</a> -->
+<a mat-list-item
+  routerLink="/main/about">
+  <mat-icon matListIcon>info_outline</mat-icon>
+  <h6 matLine> About </h6>
+</a>
+<a mat-list-item (click) = "onLogOut()">
+  <mat-icon matListIcon>power_settings_new</mat-icon>
+  <h6 matLine> Log Out </h6>
+</a>
+</mat-nav-list>

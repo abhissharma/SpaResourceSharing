@@ -1,0 +1,95 @@
+div{
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 20%;
+    right: 20%;
+}
+
+img.c1{
+    width: 23%;
+    padding-bottom: 3%;
+    max-width: 100%;
+    height: auto;
+    /* height: 30%; */
+}
+
+input{
+    font-family: 'calibri';
+    width: 25vw;
+    max-width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    /* color: red;
+    background-color: white; */
+    font-family: 'calibri';
+    font-weight: 1000;
+    /* border: none; */
+    /* padding: 1.2%; */
+    width: 12vw;
+    /* box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19); */
+    /* width: 12%; */
+    /* color: red;
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+    font-family: 'calibri';
+    font-weight: 1000;
+    border: none;
+    padding: 1.2%;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19); */
+}
+
+div.footer{
+    position: fixed;
+    top: 90%;
+    left: 0%;
+    bottom: 0%;
+    height: 8%;
+    width: 100%;
+    text-align: right;
+}
+
+img.c2{
+    padding: 0%;
+    /* height: 100%; */
+    width: 18%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* div.footer{
+    position: fixed;
+    top: 92%;
+    left: 0%;
+    bottom: 0%;
+    height: 8%;
+    width: 100%;
+    text-align: right;
+}
+
+img.c2{
+    /* top: 95%; */
+    /* padding-bottom: 0%; */
+    /* height: 100%; */
+    /* padding: 0%;
+    width: 12%;
+    max-width: 100%;
+    height: auto;
+} */
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+.spinner{
+    margin:10px auto;
+}

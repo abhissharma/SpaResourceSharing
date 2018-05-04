@@ -1,0 +1,19 @@
+div{
+    text-align: center;
+}
+
+nav{
+    background-color: rgb(199, 27, 27);
+    display: flex;
+    justify-content: space-around;
+}
+
+span{
+    color: white;
+    font-family: 'calibri';
+    height: auto;
+}
+
+a{
+    width: 100%;
+}

@@ -1,0 +1,83 @@
+<!-- <app-session></app-session>
+<div class="mat-app-background basic-container">
+    <mat-card>
+      <h4 style="font-family: calibri light">
+        Past Session 1
+      </h4>
+    </mat-card>
+</div> -->
+
+<div class="container" style="text-align:center; width: 100%">
+  <div class="col-md-2"></div>
+  <div style="margin : auto" class = "col-md-8">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="session-title"><p>{{session.name}}</p></mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding : 10px ; margin-top : 20px">
+        <table style="text-align : left; width : 100%; font-family: 'calibri'">
+          <tr >
+            <td class="description-heading col-xs-2 nopadding" >Initiator Id</td>
+            <td class="description-heading basic-padding col-xs-1" >:</td>
+            <td class="col-xs-9 nopadding"><p>{{session.initiatorEmail}}</p></td>
+          </tr>
+          <tr>
+            <td class="description-heading">Digilab</td>
+            <td class="description-heading basic-padding">:</td>
+            <td><p>{{digilab.name}}</p></td>
+          </tr>
+          <tr>
+            <td class="description-heading">Duration</td>
+            <td class="description-heading basic-padding">:</td>
+            <td><p>{{session.duration}} hour(s)</p></td>
+          </tr>
+          <tr>
+            <td class="description-heading">Date</td>
+            <td class="description-heading basic-padding">:</td>
+            <td><p>{{date}}</p></td>
+          </tr>
+          <tr>
+            <td class="description-heading">Topics</td>
+            <td class="description-heading basic-padding">:</td>
+            <td>
+              <mat-chip-list>
+                <mat-chip *ngFor="let topic of session.SessionTopics" 
+                  [selected]="'true'"
+                  style="margin : 1px;">
+                  <p>{{topic.name}}</p>
+                </mat-chip>
+              </mat-chip-list>
+            </td>
+          </tr>
+          <tr>
+            <td class="description-heading">Description</td>
+            <td class="description-heading basic-padding">:</td>
+            <td style="padding : 5px 0px;"><p>{{session.description}}</p></td>
+          </tr>
+          <tr>
+            <td class="description-heading">Guests</td>
+            <td class="description-heading basic-padding">:</td>
+            <td style="margin : px 0px;">
+              <ol style="padding : 5px 20px">
+                <li *ngFor="let guest of session.Guests">
+                  <p>{{guest.name}}</p>
+                </li>
+              </ol>
+            </td>
+          </tr>
+          
+        </table>
+
+      </mat-card-content>
+      
+      <mat-card-actions *ngIf = "isOptionsAvailable">
+        <mat-divider></mat-divider>
+        <button mat-button *ngIf="!isCancellable" (click)="onOptionSelected('Accept',null)"><mat-icon>done</mat-icon>ACCEPT</button>
+        <button mat-button *ngIf="!isCancellable" (click)="onDeclineClicked()"><mat-icon>clear</mat-icon>DECLINE</button>
+        <button mat-button *ngIf="isCancellable" (click)="onOptionSelected('Cancel',null)"><mat-icon>clear</mat-icon>CANCEL</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div class="col-md-2"></div>
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+    
+  
+    <mat-sidenav-container class="example-sidenav-container"
+                           style="background-color : #EEEEEE;"
+                           role="navigation">
+      
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" 
+                   [style.width.%] = " mobileQuery.matches ? 50 : 22  "
+                   class="mat-elevation-z8" 
+                   style="z-index : 15;">
+        <app-sidenav></app-sidenav>
+      </mat-sidenav>
+  
+      <mat-sidenav-content role="main">
+        <mat-toolbar color="primary" 
+          class="mat-elevation-z6 example-toolbar" 
+          style="z-index : 10; height: 6.5%; position : relative;">
+          <button mat-icon-button
+                    (click)="goBack()" 
+                    [style.display]="displayStatus">
+                    <mat-icon>arrow_back</mat-icon>
+          </button>
+          <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+          <h2 class="example-app-name">{{tabTitle}}</h2>
+          <span class="example-fill-remaining-space"></span>
+          <a *ngIf="id===1" routerLink="/main/digilab/new">
+            <div style="float: right">
+              <h6>CREATE A NEW DIGILAB</h6>
+            </div>
+          </a>
+          <a *ngIf="id===2" routerLink="/main/session/book">
+              <div style="float: right">
+                  <h6>BOOK A NEW SESSION</h6>
+              </div>
+          </a>
+        </mat-toolbar>
+        <div  style="z-index : 2;">
+            <router-outlet></router-outlet>
+        </div>
+      </mat-sidenav-content>
+
+    </mat-sidenav-container>
+  </div>  
+</div>

@@ -1,0 +1,45 @@
+.example-card {
+    max-width: 400px;
+    height : 157px;
+    margin: 5px;
+}
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.container{
+    padding-top: 5px;
+}
+
+img, h4{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.status{
+    color: white;
+    padding-top: 5px;
+}
+
+.digilabStatus{
+    background-color: #558B2F;
+    height: 30px;
+    width : 100%;
+}
+
+mat-divider{
+    height: 30px;
+}
+
+h4{
+    font-family: 'calibri';
+}
+/* 
+.mat-card-footer{
+    width : 100%;
+} */

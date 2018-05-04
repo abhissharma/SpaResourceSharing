@@ -1,0 +1,40 @@
+h6{
+    font-family: 'calibri';
+    /* font-size: 20%; */
+}
+
+p{    
+    color: rgb(151, 148, 148);
+    margin-left: 11.5%;
+    font-size: 120%;
+    font-family: 'calibri';
+}
+
+img{
+    padding: 10%;
+    width: 55%;
+    max-width: 100%;
+    height: auto;
+}
+
+div.mat-list-item-content{
+    height: 10%;
+    padding: 2%;
+}
+
+a.mat-list-item{
+    height: 10%;
+    padding: 2%;
+}
+
+a:active{
+    padding: 2%;
+    color: gray;
+}
+
+mat-icon{
+    color: grey;
+    max-width: 8%;
+    height: auto;
+}
+

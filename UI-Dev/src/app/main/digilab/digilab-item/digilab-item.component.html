@@ -1,0 +1,13 @@
+<mat-card class="example-card" style="cursor : pointer;" routerLink = "/main/digilab/edit/{{digilab.id}}">
+  
+  <img src="./assets/digilab1.png">  
+  <h4>{{digilab.name}}</h4>
+  <mat-card-footer> 
+    <div 
+      class="digilabStatus"
+      [style.background-color] = " digilab.isOpenForBusiness ? '#558B2F' : '#C62828' ">
+      <h4 class="status">{{ digilab.isOpenForBusiness ? 'Active' : 'Inactive' }}</h4>
+    </div>
+  </mat-card-footer>
+
+</mat-card>

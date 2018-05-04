@@ -1,0 +1,16 @@
+<!-- <style>
+    div, button, .col-xs-24{
+      font-family: 'calibri';
+    }
+  </style> -->
+  
+<div class="reason" mat-dialog-content>
+    <mat-form-field class="col-md-12 col-sm-12  col-xs-24">
+        <textarea class="i" matInput [(ngModel)]="reason" placeholder="Reason"></textarea>
+    </mat-form-field>
+</div>
+<div class="reason" mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="null" (click)="onNoClick()" type="button">Cancel</button>
+    <button mat-button [mat-dialog-close]="reason" cdkFocusInitial>Confirm</button>
+</div>
+    

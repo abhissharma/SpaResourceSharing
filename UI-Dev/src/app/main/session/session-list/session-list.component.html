@@ -1,0 +1,40 @@
+
+<div class="mat-elevation-z6" style="z-index : 7; position : relative" *ngIf="isHost">
+  <mat-tab-group 
+    mat-stretch-tabs 
+    style="z-index : 10" 
+    (selectedIndexChange)="onUserTabChange($event)"
+    [(selectedIndex)]="selectedUserMode"
+    #userTab> 
+  
+    <mat-tab label="I am an Initiator" class="mat-elevation-z6">
+    </mat-tab>   
+    <mat-tab label="I am a Host">
+    </mat-tab>
+  
+  </mat-tab-group>
+</div>
+
+<mat-tab-group 
+  mat-stretch-tabs 
+  style="z-index : 5" 
+  (selectedIndexChange) = "onSessionsTabsChange($event)" 
+  [(selectedIndex)] = "selectedIndex"
+  #sessionTypeTabGroup> 
+
+  <mat-tab label="My Sessions" class="mat-elevation-z6">
+  </mat-tab>   
+  <mat-tab label="My Session Requests">
+  </mat-tab>
+  <mat-tab label="My Past Sessions">
+  </mat-tab>
+
+</mat-tab-group>
+
+<div style="margin-top : 10px ; margin : 5px">
+          
+  <div *ngFor="let session of displayedList">
+    <app-session-item [session]="session" [sessionFor] = "selectedUserMode === 0 ? 'Initiator' : 'Host'" ></app-session-item>
+  </div>
+      
+</div>

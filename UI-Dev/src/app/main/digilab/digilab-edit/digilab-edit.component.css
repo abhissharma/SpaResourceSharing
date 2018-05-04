@@ -1,0 +1,31 @@
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 40%;
+}
+
+.left-label{
+    float : left; 
+    font-size : 17px; 
+    height : 40px ;  
+    display: flex; 
+    align-items: center;
+}
+
+.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+div
+input, 
+form, 
+button,
+span,
+.col-xs-12,
+.col-xs-6{
+    font-family: 'Calibri';
+    font-size: 105%;
+}

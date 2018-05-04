@@ -1,0 +1,29 @@
+<div style="text-align:center">
+    <img class="c1" src="assets/digilab.png" alt="DigiLab">
+    <form (ngSubmit)="onSubmit()" #f="ngForm"> 
+      <!-- removed f from onSubmit(f) for viewChild -->
+      <input 
+        type="email" 
+        placeholder="Email"
+        ngModel
+        name="email"
+        required><br><br>
+      <input 
+        type="password" 
+        placeholder="Password"
+        ngModel
+        name="password"
+        required><br><br><br>
+      <button 
+        color="primary"
+        mat-raised-button
+        type="submit" 
+        name="login"
+        [disabled]="!f.valid && !showSpinner">LOGIN</button>
+    </form>
+    <mat-spinner *ngIf="showSpinner" [diameter]="40" class="spinner"></mat-spinner>
+  </div>
+  
+  <div class="footer">
+      <img class=c2 src="assets\sopra steria.png" alt="Sopra Steria">
+  </div>

@@ -1,0 +1,179 @@
+<div class="container" style="text-align:center; width : 100%;">
+  <div class="col-md-2"></div>
+  
+  <div  class = "col-md-8">
+    <mat-card>
+      <form [formGroup] = "digilabForm" (ngSubmit) = "onSubmit()">
+        
+        <mat-form-field class="col-xs-12">
+          <input 
+            class="c1"
+            matInput 
+            placeholder="Digilab Name" 
+            formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field class="col-xs-12">
+          <mat-chip-list #chipList>
+            <mat-chip *ngFor="let topic of digilab.Topics" 
+                      [selected]="selected"
+                      [removable]="removable" 
+                      (remove)="onRemoveTopic(topic)"
+                      >
+                        {{topic.name}}
+              <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="Add Topics"
+                    [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="onAddTopic($event)" />
+          </mat-chip-list>
+        </mat-form-field>
+
+        <mat-form-field class="col-md-6 col-sm-6 col-xs-12">
+          <input 
+            matInput
+            type="number" 
+            placeholder="Latitude" 
+            formControlName="locationLat">
+        </mat-form-field>
+
+        <mat-form-field class="col-md-6 col-sm-6 col-xs-12">
+          <input 
+            matInput 
+            type="number"
+            placeholder="Longitude" 
+            formControlName="locationLong">
+        </mat-form-field>
+
+        <mat-form-field class="col-xs-12">
+          <input 
+            matInput 
+            type="email"
+            placeholder="Digilab Email" 
+            formControlName="email">
+          <!-- <span matSuffix>@soprasteria.com</span>   -->
+        </mat-form-field>
+         
+        <div class="col-xs-12">
+          <span class="left-label" >Hosts</span>
+          <button 
+            mat-icon-button 
+            style="float : right;"
+            type="button"
+            (click) = "onAddHost()"  ><mat-icon>add</mat-icon></button>
+        </div>
+
+        
+        <div formArrayName="DigilabHosts">
+          <div *ngFor = "let hostCtrl of digilabForm.get('DigilabHosts').controls; let i = index" 
+            [formGroupName]="i">
+            <mat-form-field class="col-md-6 col-sm-6 col-xs-12" >
+              <input 
+                matInput 
+                type="email"
+                placeholder="Host {{i+1}}" 
+                formControlName="email">
+              <mat-icon matSuffix (click)="onRemoveHost(i)" style="cursor : pointer;">delete</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <mat-form-field class="col-xs-12">
+          <input 
+            matInput 
+            type="email"
+            placeholder="Receptionist  Email" 
+            formControlName="receptionEmail">
+          <!-- <span matSuffix>@soprasteria.com</span>   -->
+        </mat-form-field>
+
+        <div class="col-xs-12">
+          <span class="left-label" >Time Range</span>
+        </div>
+
+        <mat-form-field class="col-xs-6">
+          <input 
+            matInput 
+            placeholder="Start Time"
+            atp-time-picker
+            theme="material-red"
+            formControlName="startTime">
+        </mat-form-field>
+
+        <mat-form-field class="col-xs-6">
+          <input 
+            matInput 
+            placeholder="End Time"
+            atp-time-picker
+            theme="material-red"
+            formControlName="endTime">
+        </mat-form-field>
+
+        <mat-form-field class="col-xs-6">
+          <input 
+            matInput
+            type="number" 
+            placeholder="Feedback Delays (days)" 
+            formControlName="feedBackDelayTime" />
+        </mat-form-field>
+        
+        <mat-form-field class="col-xs-6">
+          <input 
+            matInput
+            type="number" 
+            placeholder="Pre Book expiry (hrs)" 
+            formControlName="preBookExpiryTime" />
+        </mat-form-field>
+
+        <mat-form-field class="col-md-6 col-sm-6 col-xs-12">
+          <input 
+            matInput
+            type="text" 
+            placeholder="Feedback Question 1" 
+            formControlName="question1" />
+        </mat-form-field>
+
+        <mat-form-field class="col-md-6 col-sm-6 col-xs-12">
+          <input 
+            matInput
+            type="text" 
+            placeholder="Feedback Question 2" 
+            formControlName="question2" />
+        </mat-form-field>
+
+        <mat-form-field class="col-xs-12">
+          <input 
+            matInput
+            type="number" 
+            placeholder="Reception Mail Delivery (hrs)" 
+            formControlName="receptionistMailDeliveryHours" />
+        </mat-form-field>
+
+        <div class="col-xs-12">
+          <span class="left-label" >Notifiaction Parameters</span>
+        </div>
+        
+        <div class="col-md-4 col-sm-4 col-xs-12" style="margin-top : 10px">
+          <mat-slide-toggle formControlName="isEmailNotificationEnabled"><span>Email</span></mat-slide-toggle>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12" style="margin-top : 10px">
+          <mat-slide-toggle formControlName="isPushNotificationEnabled"><span>Push</span></mat-slide-toggle>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12" style="margin-top : 10px">
+          <mat-slide-toggle formControlName="isOpenForBusiness">
+            <span>Active</span>
+          </mat-slide-toggle>
+        </div>
+
+        <button mat-raised-button style="margin-top : 20px; width : 60%;" color="primary">{{ editMode ? 'UPDATE' : 'REGISTER' }}</button>
+
+      </form>
+    </mat-card>
+  </div>
+  
+  <div class="col-md-2"></div>
+</div>

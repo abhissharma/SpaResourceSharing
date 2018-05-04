@@ -1,0 +1,15 @@
+div{
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    right: 1%;
+}
+
+h1{
+    font-family: 'Calibri';
+    font-size: 3.5vw;
+}
+
+p{
+    font-family: 'Calibri'
+}

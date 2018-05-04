@@ -1,0 +1,25 @@
+.container{
+    padding-top: 10px;
+}
+
+#addMore{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top : 2.5vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; */
+}
+
+h4{
+    text-align: center;
+    font-family: 'calibri';
+}
+
+.example-card {
+    max-width: 400px;
+    height : 157px;
+    margin: 5px;
+}

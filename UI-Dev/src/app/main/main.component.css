@@ -1,0 +1,60 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+
+  h2.example-app-name{
+    font-family: 'calibri';
+  }
+
+  mat-sidenav{
+    background-color: rgba(228, 227, 227, 0.884);
+  }
+
+  button.mat-icon-button{
+    width: 5%;
+    max-width: 10%;
+    height: auto;
+  }
+
+  h6{
+    font-family: 'calibri';
+    text-align: right;
+  }
+
+  a{
+    color: white;
+    text-align: right;
+    margin-left: 60%;
+  }
+
+  .example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }

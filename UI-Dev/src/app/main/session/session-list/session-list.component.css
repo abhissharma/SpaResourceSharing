@@ -1,0 +1,41 @@
+
+.mat-ink-bar{
+    color: rgb(255, 255, 255) !important;
+    background-color:white !important;
+    padding: 0 5px; 
+}
+
+.mat-tab-labels{
+    opacity: 1;
+    background-color: rgb(199, 47, 47);
+}
+
+.mat-tab-label-content{
+    font-family: 'calibri';
+    color: white;
+    font-size: 130%;
+    font-weight: 700; 
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.wrapper {
+    display: table;
+    height: auto;
+    width: 100%;
+}
+.wrapper2 {
+    height: 100%;
+    display: table-row;
+}
+.inner {
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.text{
+    margin : 0px;
+    font-weight: 700;
+}
+  

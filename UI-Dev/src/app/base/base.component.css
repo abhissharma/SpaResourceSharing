@@ -1,0 +1,61 @@
+div{
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 20%;
+    right: 20%;
+}
+
+h1.c1{
+    font-family: 'Calibri light';
+    font-weight: 1;
+    font-size: 4vw;
+}
+
+h3.c2{
+    font-family: 'Calibri';
+    font-weight: 1;
+    font-size: 2.5vw;
+}
+
+h1.c3{
+    font-family: 'Calibri light';
+    font-size: 10vw;
+}
+
+img.c5{
+    /* height: 30%; */
+    width: 23%;
+    padding-bottom: 3%;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    color: red;
+    background-color: white;
+    font-family: 'calibri';
+    font-weight: 1000;
+    border: none;
+    padding: 1.2%;
+    width: 21vw;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19);
+}
+
+div.footer{
+    position: fixed;
+    top: 90%;
+    left: 0%;
+    bottom: 0%;
+    height: 8%;
+    width: 100%;
+    text-align: right;
+}
+
+img.c6{
+    padding: 0%;
+    /* height: 100%; */
+    width: 18%;
+    max-width: 100%;
+    height: auto;
+}

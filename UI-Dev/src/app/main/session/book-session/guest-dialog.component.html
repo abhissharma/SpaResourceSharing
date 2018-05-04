@@ -1,0 +1,25 @@
+<style>
+  div, button, .col-xs-24{
+    font-family: 'calibri';
+  }
+</style>
+
+<div mat-dialog-content>
+    <mat-form-field class="col-md-12 col-sm-12  col-xs-24">
+      <input class="i" matInput [(ngModel)]="guest.name" placeholder="Name">
+    </mat-form-field>
+    <mat-form-field class="col-md-12 col-sm-12  col-xs-24">
+      <input class="i" matInput [(ngModel)]="guest.email" placeholder="Email">
+    </mat-form-field>
+    <mat-form-field class="col-md-12 col-sm-12  col-xs-24">
+      <input class="i" matInput [(ngModel)]="guest.contact" placeholder="Contact">
+    </mat-form-field>
+    <mat-form-field class="col-md-12 col-sm-12  col-xs-24">
+      <input class="i" matInput [(ngModel)]="guest.company" placeholder="Company">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="null" (click)="onNoClick()" type="button">Cancel</button>
+    <button mat-button [mat-dialog-close]="guest" cdkFocusInitial>Add</button>
+  </div>
+  

@@ -1,0 +1,7 @@
+<div *ngFor="let session of sessions.ForReceptionist" >
+  <app-session-item 
+      [session]="session" 
+      [sessionFor] = "'Receptionist'"
+      [showStatus] = "false" >
+  </app-session-item>
+</div>

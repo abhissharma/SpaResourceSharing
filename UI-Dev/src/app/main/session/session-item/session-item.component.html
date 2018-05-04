@@ -1,0 +1,23 @@
+<div class="col-md-3 col-sm-4 col-xs-6" style="padding : 5px">
+  <mat-card style="cursor: pointer;" (click) = "onClick()" >
+    <div class="wrapper">
+      <div class="wrapper2">
+        <div style="width : 5px; height : 71px" class="inner"
+            [style.backgroundColor]="getColor()"></div>
+        <div class="inner" style="text-align : center; margin-left : 5px;" >
+          <p style="font-size:12px;" class="text">{{ month }}</p>
+          <p style="font-size:40px; line-height : 1" class="text">{{date}}</p>
+          <p style="font-size:10px;" class="text">{{day}}</p>
+        </div > 
+      </div>
+    </div>
+    <div style="background-color : rgb(31, 30, 30); margin-top : 25px;" >
+      <div style="width : 100% ; text-align : center; padding : 5px">
+        <p style="color : white;" class="text" >{{session.name}}</p>
+      </div>
+    </div>
+    <div style="width : 100% ; text-align : center; margin-top : 5px" *ngIf="showStatus">
+      <p class="statusText" [style.color]="getColor()" >{{session.stateId}}</p>
+    </div>
+  </mat-card>
+</div>

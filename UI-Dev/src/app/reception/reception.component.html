@@ -1,0 +1,13 @@
+<div class="container" >
+  <div class="example-container" style="background-color : #EEEEEE;">
+    <mat-toolbar color="primary" 
+      class="mat-elevation-z6 example-toolbar" >
+      <p class="p-edit">Digilab Reception</p>
+      <span class="example-fill-remaining-space"></span>
+      <p class="p-edit" (click) = "onLogOut()" style="cursor: pointer;">Logout</p>
+    </mat-toolbar>
+    <div  style="z-index : 2; background-color : #EEEEEE;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

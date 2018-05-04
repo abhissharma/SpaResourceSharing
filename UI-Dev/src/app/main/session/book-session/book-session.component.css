@@ -1,0 +1,91 @@
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 40%;
+}
+
+.left-label{
+    float : left; 
+    font-size : 17px; 
+    height : 40px ;  
+    display: flex; 
+    align-items: center;
+}
+
+.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    color: rgba(0,0,0,0.6);
+}
+  
+.title {
+    margin-right: auto;
+    font-weight: 600;
+}
+  
+.info{
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+.guest-card{
+    padding: 10px;  
+    max-height: 120px;
+}
+
+.row{
+    margin-right: auto;
+    margin-left : auto;
+}
+
+div,
+input,
+form,
+p,
+button,
+span
+.row,
+.col-xs-12,
+.col-md-6,
+.col-md-2,
+mat-select{
+    font-family: 'calibri';
+    font-size: 105%;
+}
+
+#container{
+    text-align: center;
+}
+
+.description-heading{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(83, 83, 83);
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.basic-padding{
+    padding : 5px 10px
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+p.nopadding{
+    font-size: 105%;
+    font-family: 'calibri'
+}
+
+mat-datepicker{
+    fontFamily: 'calibri'
+}
